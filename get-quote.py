@@ -3,13 +3,18 @@ import random
 def Isaac():
 
 
-  f = open("quotes.txt")
+  f = open("quotes.txt", "a+")
+  f.write("Be Nice\n")
   quotes = f.readlines()
   f.close()
-  
-  last = 13
+
+  last = 17
   rnd = random.randint(0, last)
-  print(quotes[rnd])
+  print(quotes[rnd].rstrip())
+  rnd = random.randint(0, last)
+  print(quotes[rnd].rstrip())
+  rnd = random.randint(0, last)
+  print(quotes[rnd].rstrip())
 
 if __name__== "__main__":
   Isaac()
